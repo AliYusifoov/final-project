@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+body .parent {
+  width: 100vw;
+  position: relative;
+}
+body .parent .menu {
+  padding: 3vh 28vw;
+  background-color: #2f2e2e;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-around;
+  z-index: 3;
+}
+body .parent .menu a {
+  color: whitesmoke;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: scale(0.95, 1);
+  font-weight: 300;
+  transition: 0.5s;
+}
+body .parent .menu a:hover {
+  color: rgb(166, 166, 166);
+}
+body .parent .home {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+body .parent .home .video-background {
+  background-attachment: fixed;
+  width: 100vw;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+  top: -10vh;
+  z-index: -5;
+}
+body .parent .home .black {
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(50, 50, 50, 0.2);
+}
+body .parent .home .logo {
+  z-index: 1;
+  position: absolute;
+  top: 18vh;
+  margin: 0 45vw;
+}
+body .parent .home .logo img {
+  width: 9vw;
+}
+body .parent .home .header {
+  position: absolute;
+  color: white;
+  top: 40vh;
+  margin: 0 35.5vw;
+}
+body .parent .home .header h1 {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transform: scale(1, 1.2);
+}
+body .parent .home .header p {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+body .parent .home .icons {
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 95vh;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+body .parent .home .icons i {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  margin: 0 1vw;
+}
+body .parent .services {
+  height: 90vh;
+  width: 100vw;
+  background: url(project\ bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: whitesmoke;
+  z-index: 2;
+}
+body .parent .services h2 {
+  font-size: 35px;
+  padding-top: 15vh;
+  font-weight: 400;
+  z-index: 3;
+}
+body .parent .services .line {
+  z-index: 3;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  margin-top: 5vh;
+  width: 2.5vw;
+  height: 0.4vh;
+}
+body .parent .services .circles {
+  display: flex;
+  margin: 0 auto;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  margin-top: 10vh;
+}
+body .parent .services .circles .c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 20vw;
+}
+body .parent .services .circles .c .circle {
+  border: solid 3px whitesmoke;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  font-size: 70px;
+}
+body .parent .services .circles .c .circle i {
+  margin: 5.5vh auto;
+}
+body .parent .services .circles .c h3 {
+  margin-top: 3vh;
+  font-size: 20px;
+  transition: 1s;
+  font-weight: 300;
+}
+body .parent .services .circles .c p {
+  transition: 1s;
+  margin-top: 3vh;
+  max-width: 10vw;
+  font-weight: 400;
+  opacity: 0;
+}
+body .parent .services .circles .c p.visible {
+  opacity: 1;
+}
+body .parent .works {
+  background-color: whitesmoke;
+  position: relative;
+  height: 120vh;
+  width: 100vw;
+  font-weight: 300;
+  color: rgb(14, 14, 14);
+  z-index: 1;
+}
+body .parent .works h2 {
+  font-weight: 400;
+  padding-top: 10vh;
+}
+body .parent .works .line {
+  z-index: 3;
+  margin: 0 auto;
+  background-color: rgb(14, 14, 14);
+  margin-top: 2.5vh;
+  width: 2.5vw;
+  height: 0.4vh;
+}
+body .parent .works p {
+  margin-top: 2.5vh;
+  font-size: 20px;
+  padding-bottom: 2.5vh;
+}
+body .parent .works .images {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+body .parent .works .images img {
+  width: 28vw;
+  height: 40vh;
+  background-size: contain;
+}
+body .parent .works .hovering {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  display: flex;
+  margin: 0 auto;
+  height: 40vh;
+}
+body .parent .works .hovering .imghover {
+  padding-top: 50px;
+  opacity: 0;
+  width: 28vw;
+  padding: 0 2vw;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  height: 40vh;
+  background-color: rgba(47, 46, 46, 0.5);
+}
+body .parent .works .hovering .imghover p {
+  font-size: 15px;
+}
+body .parent .works .hovering .imghover .likes {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  left: 10%;
+  bottom: 10%;
+}
+body .parent .works .hovering .imghover .likes .like {
+  border: none;
+  outline: none;
+  position: absolute;
+  background-color: transparent;
+}
+body .parent .works .hovering .imghover .likes .like i {
+  font-size: 25px;
+  color: whitesmoke;
+}
+body .parent .works .hovering .imghover .likes .like i:hover {
+  color: whitesmoke;
+}
+body .parent .works .hovering .imghover .likes .count {
+  font-size: 20px;
+  position: absolute;
+  margin-bottom: 3px;
+  margin-left: 60px;
+  color: whitesmoke;
+}
+body .parent .works .hovering .imghover .share {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  position: absolute;
+  right: 10%;
+  bottom: 7%;
+}
+body .parent .works .hovering .imghover .share i {
+  font-size: 25px;
+}
+body .parent .works .hovering .imghover:hover {
+  opacity: 1;
+}
+body .parent .works .hovering .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(14, 14, 14, 0.3);
+  opacity: 0;
+  transition: 0.3s;
+}
+body .parent .works .hovering .modal.show {
+  display: block;
+  opacity: 1;
+}
+body .parent .works .hovering .modal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border: 1px solid #888;
+  width: 40%;
+  border-radius: 1px;
+  height: 30%;
+  transform: translateY(-50px);
+  transition: 0.3s;
+}
+body .parent .works .hovering .modal .modal-content.show {
+  transform: translateY(0);
+}
+body .parent .works .hovering .modal .modal-content.hide {
+  transition: none;
+  transform: translateY(-50px);
+}
+body .parent .works .hovering .modal .modal-content .shares {
+  padding: 5vh 7vw;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-evenly;
+}
+body .parent .works .hovering .modal .modal-content .shares a {
+  color: black;
+  text-decoration: none;
+}
+body .parent .works .hovering .modal .modal-content .send input {
+  width: 16vw;
+  padding: 5px;
+  margin: 0 auto;
+  height: 5vh;
+  border: black solid 1px;
+  outline: none;
+  border-radius: 0px;
+}
+body .parent .works .hovering .modal .modal-content .send button {
+  background-color: black;
+  color: white;
+  width: 3vw;
+  height: 5vh;
+  margin-left: -10px;
+}
+body .parent .works .hovering .modal .close {
+  right: 3%;
+  top: 0%;
+  color: #aaa;
+  font-size: 28px;
+  position: absolute;
+  font-weight: bold;
+  transition: 0.2s;
+}
+body .parent .works .hovering .modal .close:hover, body .parent .works .hovering .modal .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .parent .works .hovering .likes button, body .parent .works .hovering .share button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+body .parent .works .hovering1 {
+  top: 29.5vh;
+}
+body .parent .works .hovering2 {
+  top: 69.5vh;
+}
+body .parent .about {
+  background-attachment: fixed;
+  z-index: 0;
+  background: url(bg\ project.png) fixed center center no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+body .parent .about .descr {
+  width: 42vw;
+  height: 60vh;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: 1s;
+  margin: 10% auto;
+}
+body .parent .about .descr h2 {
+  font-weight: 300;
+}
+body .parent .about .descr .line {
+  z-index: 3;
+  margin: 2.5vh auto;
+  background-color: rgb(14, 14, 14);
+  width: 2.5vw;
+  height: 0.3vh;
+}
+body .parent .about .descr p {
+  font-size: 16px;
+  width: 28vw;
+  margin: 0 auto;
+}
+body .parent .about .descr.visible {
+  opacity: 1;
+}
+body .parent .people {
+  height: 80vh;
+  position: relative;
+  top: 100vh;
+  width: 100vw;
+  background: url(people-project.png) no-repeat fixed;
+  background-size: cover;
+  z-index: -3;
+}
+body .parent .contacts {
+  background: url(bg\ project.png);
+  position: relative;
+  width: 100vw;
+  background-attachment: fixed;
+  top: 100vh;
+  height: 150vh;
+}
+body .parent .contacts img {
+  height: 30vh;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+body .parent .contacts .contactform {
+  background-color: #fefefe;
+  width: 42vw;
+  height: 95vh;
+  margin: 0 auto;
+  opacity: 0;
+  margin-top: -10%;
+  transition: 1s;
+  padding-top: 4%;
+}
+body .parent .contacts .contactform .line {
+  z-index: 3;
+  margin: 2.5vh auto;
+  background-color: rgb(14, 14, 14);
+  width: 2.5vw;
+  height: 0.3vh;
+}
+body .parent .contacts .contactform h2 {
+  display: inline;
+  font-weight: 400;
+}
+body .parent .contacts .contactform form {
+  display: flex;
+  text-align: left;
+  margin-top: -22%;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 300;
+}
+body .parent .contacts .contactform form .info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 12.5vw;
+  justify-content: center;
+}
+body .parent .contacts .contactform form .info .time {
+  width: 8.4vw;
+}
+body .parent .contacts .contactform form .forma {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-top: 25%;
+}
+body .parent .contacts .contactform form .forma input {
+  width: 18vw;
+  height: 4.5vh;
+  padding-left: 20px;
+  margin-bottom: 1vh;
+  border: solid 1px black;
+  outline: none;
+}
+body .parent .contacts .contactform form .forma span {
+  color: rgb(119, 0, 0);
+}
+body .parent .contacts .contactform form .forma input:hover {
+  border: 2px gray solid;
+}
+body .parent .contacts .contactform form .forma label {
+  margin-bottom: 1vh;
+}
+body .parent .contacts .contactform form .forma textarea {
+  border: black 1px solid;
+  outline: none;
+  width: 18vw;
+  padding-left: 20px;
+  height: 15vh;
+}
+body .parent .contacts .contactform form .forma textarea:hover {
+  border: gray 2px solid;
+}
+body .parent .contacts .contactform form .forma .submit {
+  margin-top: 1vh;
+  background-color: rgb(57, 57, 57);
+  color: white;
+  height: 4vh;
+  font-weight: 300;
+}
+body .parent .contacts .contactform.visible {
+  opacity: 1;
+}
+body .parent .finish {
+  margin-top: 5%;
+  background-color: #2f2e2e;
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+body .parent .finish .fcircles {
+  display: flex;
+  justify-content: space-around;
+  width: 10vw;
+  position: relative;
+  margin: 0 auto;
+}
+body .parent .finish .fcircles button {
+  background-color: whitesmoke;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+body .parent .finish .fcircles button i {
+  font-size: 18px;
+}
+body .parent .finish p {
+  color: whitesmoke;
+  font-weight: 300;
+  font-size: 14px;
+  position: relative;
+  top: 10%;
+}
+body .parent .reveal {
+  opacity: 0;
+  transition: 1s ease;
+}
+body .parent .visible {
+  opacity: 1;
+}/*# sourceMappingURL=project.css.map */
